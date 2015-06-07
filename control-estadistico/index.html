@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Control</title>
+		<meta charset="utf-8"/>
+		<link href="css/demo.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="Chart.js"></script>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="legend.js"></script>
+		<script src="Peticiones.js"></script>
+		<script src="Municipios.js"></script>
+		<script src="Diario.js"></script>
+		<script src="Rutas.js"></script>
+		<script type="text/javascript">
+			/*
+			 * Asigna el formato xml o json en funcion del fichero "biziConfig.txt"
+			 */
+
+			$.get(
+				"parseConfig.txt",
+				function(interaccion) {
+				  leerPeticiones(interaccion.trim());
+					leerMunicipios(interaccion.trim());
+					leerDiarias(interaccion.trim());
+					leerRutas(interaccion.trim());
+				}
+			);
+			
+		</script>
+	</head>
+  <body>
+		<h1 align=center> Control estadístico </h1>
+		<div class="row" >
+			<div class="col-md-6">
+				<canvas id="myChart1" width="400" height="400"></canvas>
+				<div class = "col-md-6" id="pie"></div>
+				</br>
+			</div>
+			<div class="col-md-6">
+				<canvas id="myChart2" width="400" height="400"></canvas>
+				<div class = "col-md-6" id="g2"></div>
+				</br>
+			</div>
+		</div>
+		<div class="row" > 
+			<div class="col-md-6">
+				<canvas id="myChart3" width="400" height="400"></canvas>
+				<div class = "col-md-6" id="g3"></div>
+				</br>
+			</div>
+			<div class="col-md-6">
+				<canvas id="myChart4" width="400" height="400"></canvas>
+				<div class = "col-md-6" id="g4"></div>
+				</br>
+			</div>
+		</div>
+		
+  </body>
+</html>
