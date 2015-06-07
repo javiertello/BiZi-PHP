@@ -9,3 +9,5 @@ La aplicación Web estará disponible en [http://localhost/seguimiento-Bizi](htt
 
 También contiene control estadístico de la aplicación (Almacena las acciones en Parse). Está disponible en: [http://localhost/control-estadistico](http://localhost/control-estadistico)
 
+Captura de la aplicación:
+![Captura App](http://https://github.com/javiertello/BiZi-PHP/blob/master/captura_final.png)
